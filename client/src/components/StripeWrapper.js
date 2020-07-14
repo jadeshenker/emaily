@@ -5,7 +5,6 @@ import * as actions from '../actions';
 
 class StripeWrapper extends Component {
     render () {
-        debugger;
         return (
             <StripeCheckout 
                 name="Emaily"
