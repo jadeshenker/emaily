@@ -1,0 +1,336 @@
+body, p {
+    font-family: 'Questrial', sans-serif;
+}
+
+h3 {
+    font-family: 'Marcellus', serif;;
+    font-size: 1.5rem;
+    line-height: 1rem;
+}
+
+h2 {
+    font-family: 'Marcellus', serif;;
+    font-size: 1.7rem;
+}
+
+h1 {
+    font-family: 'Marcellus', serif;;
+    font-size: 3rem;
+}
+
+/* nav */
+
+nav {
+    background-color: black;
+}
+
+nav li a {
+    transition: color 0.3s ease-in-out;
+}
+
+nav li a:hover {
+    color: #8AEA92;
+}
+
+.brand-logo {
+    font-family: 'Marcellus', serif;
+}
+
+.credits-button {
+    font-family: 'Questrial', sans-serif;
+    border: 1px solid white;
+    width: 8rem;
+    border-radius: 2rem;
+    color: white;
+    background-color: black;
+    padding: 0.6rem;
+    transition: background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+.credits-button:hover {
+    color: black;
+    background-color: white;
+}
+
+.add-button {
+    color: white;
+    position: fixed;
+    top: 86%;
+    right: 8%;
+    width: 3.5rem; 
+    height: 3.5rem;
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.4s ease-in-out;
+    transition: color 0.35s ease-in-out;
+    background-color: black;
+}
+
+.add-button i {
+    font-size: 1.7rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.add-button:hover {
+    background-color: #8AEA92;
+    color: black;
+}
+
+/* survey list */ 
+
+.survey-subtitle {
+    color: rgb(170, 159, 159);
+}
+
+.surveylist-wrapper {
+    margin: 2rem 7rem;
+}
+
+.survey-card {
+    clear: both;
+    margin: 4rem 0rem;
+}
+
+.survey-card {
+    border: 1px solid black;
+}
+
+.survey-card-content {
+    margin-top: 1rem;
+    float: left;
+    width: 60%;
+}
+
+.survey-card-content p {
+    line-height: 0.8rem;
+}
+
+.survey-card-results {
+    text-align: center;
+    float: right;
+    width: 40%;
+}
+
+.survey-card-results p {
+    float: right;
+    margin-right: 4rem;
+}
+
+.chart-wrapper {
+    padding: 1rem;
+}
+
+.yes-title, .no-title, .total-title {
+    padding: 0.2rem;
+    margin-right: 0.5rem;
+    display: inline-block;
+    width: 5rem;
+    border: 1.8px solid;
+    border-radius: 2rem;
+}
+
+.no-title { color: #E83151; border-color: #E83151 ;}
+.yes-title { color: blueviolet; border-color: blueviolet; }
+.total-title { border-color: black; color: black;}
+
+
+/* survey form */ 
+
+label {
+    font-size: 0.9rem;
+}
+
+form {
+    margin: 4rem 3rem 0rem 3rem;
+}
+
+.confirm-btn, .cancel-btn {
+    padding: 0.2rem;
+    font-family: 'Questrial', sans-serif;
+    background-color: white;
+    text-align: center;
+    float: right;
+    width: 9rem; 
+    border: 1.8px solid black;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+.cancel-btn { 
+    float: left; 
+    color: black;
+}
+
+.confirm-btn i, .cancel-btn i {
+    padding-left: 0.4rem;
+    top: 11%;
+    transform: translateY(11%);
+    -ms-transform: translateY(11%);
+}
+
+.cancel-btn:hover, .confirm-btn:hover {
+    color: white;
+    background-color: black;
+}
+
+/* survey form review */
+
+.title-preview {
+    font-size: 1.8rem;
+}
+
+.email-field {
+    width: 40rem;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    border: 1.8px solid black;
+}
+
+.email-field-body {
+    width: 40rem;
+    height: 15rem;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 2rem 0rem;
+    border: 1.8px solid black;
+}
+
+/* landing page animation: https://codepen.io/mohaiman/pen/MQqMyo */
+
+.landing-title {
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 40vh;
+}
+
+.area{
+    background:blueviolet;  
+    background: -webkit-linear-gradient(to left, #E3D7FF, #4e54c8);  
+    width: 100%;
+    height:93.5vh;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}

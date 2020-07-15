@@ -19,12 +19,15 @@ class SurveyForm extends Component {
     render() {
         return(
             <div>
+                <h1>Create your Survey</h1>
+                <p>Please fill in the following fields. You will have a chance to review your choices before sending.</p>
                 <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
                     {this.renderFields()}
-                    <Link to="/surveys" className="red btn-flat white-text">Cancel</Link>
-                    <button type="submit" className="teal btn-flat right white-text">
-                        Review
-                        <i className="material-icons right">done</i>
+                    <Link to="/surveys" className="cancel-btn">
+                        Cancel<i class="tiny material-icons">cancel</i>
+                    </Link>
+                    <button type="submit" className="confirm-btn">
+                        Review<i class="tiny material-icons">done</i>
                     </button>
                 </form>
             </div>

@@ -2,25 +2,58 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSurveys } from '../../actions';
 
+
+import CanvasJSReact from '../../assets/canvasjs.react';
+var CanvasJS = CanvasJSReact.CanvasJS;
+var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+
+
 class SurveyList extends Component {
     componentDidMount() {
         this.props.fetchSurveys();
     }
 
+    renderCharts(yes, no) {
+        var total = yes + no;
+        const options = {
+            animationEnabled: true, 
+            height: 240, 
+            data: [{
+                type: "doughnut", 
+                showInLegend: false, 
+                indexLabel: "{name}: {y}",
+                dataPoints: [
+                    {name: "yes", y: yes, color: "#8338EC"},
+                    {name: "no", y: no, color: "#E83151" }
+                ]
+            }]
+        }
+        return(
+            <div className="chart-wrapper">
+                <div className="yes-title">{yes} yes's</div>
+                <div className="total-title">{total} total</div>
+                <div className="no-title">{no} no's</div>
+                <CanvasJSChart options={options} />
+            </div>
+        );
+    }
+
     renderSurveys() {
         return this.props.surveys.reverse().map(survey => {
             return (
-                <div className="card" key={survey._id}>
-                    <div className="card-content">
-                        <span className="card-title">{survey.title}</span>
+                <div className="survey-card" key={survey._id}>
+                    <div className="survey-card-content">
+                        <h3>{survey.title}</h3>
+                        <p className="survey-subtitle">subject:</p>
+                        <p>{survey.subject}</p>
+                        <p className="survey-subtitle">body:</p>
                         <p>{survey.body}</p>
-                        <p className="right">
-                            Sent On: {new Date(survey.dateSent).toLocaleDateString()}
-                        </p>
+                        <p className="survey-subtitle">sent:</p>
+                        <p> {new Date(survey.dateSent).toLocaleDateString()} </p>
                     </div>
-                    <div className="card-action">
-                        <a>Yes: {survey.yes}</a>
-                        <a>No: {survey.no}</a>
+                    <div className="survey-card-results">
+                        {survey.lastResponded && <div><p className="survey-subtitle">last response:</p> <p>{new Date(survey.lastResponded).toLocaleDateString()}</p></div>}
+                        {this.renderCharts(survey.yes, survey.no)}
                     </div>
                 </div>
             )
@@ -29,7 +62,10 @@ class SurveyList extends Component {
 
     render() {
         return(
-            <div>{this.renderSurveys()}</div>
+            <div className="surveylist-wrapper">
+                <h2>Your Surveys</h2>
+                <div>{this.renderSurveys()}</div>
+            </div>
         );
     }
 }

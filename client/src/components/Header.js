@@ -14,7 +14,7 @@ class Header extends Component {
             default: 
                 return [
                     <li key="1"><StripeWrapper /></li>,
-                    <li key="2" style={{margin: '0 10px'}}>Credits: {this.props.auth.credits}</li>,
+                    <li key="2" style={{margin: '0 50px'}}>My Credits : {this.props.auth.credits}</li>,
                     <li key="3"><a href="/api/logout">Logout</a></li>
                 ];
         }
@@ -22,19 +22,21 @@ class Header extends Component {
 
     render() {
         return(
-            <nav>
-                <div className="nav-wrapper container">
-                    <Link 
-                        to={this.props.auth ? '/surveys' : '/' } 
-                        className="left brand-logo"
-                    >
-                        Emaily
-                    </Link>
-                    <ul className="right">
-                        {this.renderContent()}
-                    </ul>
-                </div>
-            </nav>
+            <div class="navbar-fixed">
+                <nav>
+                    <div className="nav-wrapper container">
+                        <Link 
+                            to={this.props.auth ? '/surveys' : '/' } 
+                            className="left brand-logo"
+                        >
+                            Emaily
+                        </Link>
+                        <ul className="right">
+                            {this.renderContent()}
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         );
     }
 }
