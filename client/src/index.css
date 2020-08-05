@@ -128,18 +128,16 @@ nav li a:hover {
     padding: 1rem;
 }
 
-.yes-title, .no-title, .total-title {
+.results-title {
     padding: 0.2rem;
     margin-right: 0.5rem;
     display: inline-block;
     width: 5rem;
-    border: 1.8px solid;
+    background-color: #FFC53A;
+    color: black;
     border-radius: 2rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
 }
-
-.no-title { color: #3D5A6C; border-color: #3D5A6C ;}
-.yes-title { color: #FFC53A; border-color: #FFC53A; }
-.total-title { border-color: black; color: black;}
 
 
 /* survey form */ 
