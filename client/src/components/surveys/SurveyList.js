@@ -30,9 +30,9 @@ class SurveyList extends Component {
         }
         return(
             <div className="chart-wrapper">
-                <div className="results-title"><b>{yes} yes's</b></div>
-                <div className="results-title"><b>{total} total</b></div>
-                <div className="results-title"><b>{no} no's</b></div>
+                <div className="results-title">{yes} yes's</div>
+                <div className="results-title">{total} total</div>
+                <div className="results-title">{no} no's</div>
                 <CanvasJSChart options={options} />
             </div>
         );

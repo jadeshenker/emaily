@@ -130,13 +130,13 @@ nav li a:hover {
 
 .results-title {
     padding: 0.2rem;
-    margin-right: 0.5rem;
+    margin: 0rem 0.5rem 1rem 0rem;
     display: inline-block;
     width: 5rem;
     background-color: #FFC53A;
     color: black;
     border-radius: 2rem;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.05);
 }
 
 
