@@ -23,16 +23,16 @@ class SurveyList extends Component {
                 showInLegend: false, 
                 indexLabel: "{name}: {y}",
                 dataPoints: [
-                    {name: "yes", y: yes, color: "#8338EC"},
-                    {name: "no", y: no, color: "#E83151" }
+                    {name: "yes", y: yes, color: "#FFC53A"},
+                    {name: "no", y: no, color: "#3D5A6C" }
                 ]
             }]
         }
         return(
             <div className="chart-wrapper">
-                <div className="yes-title">{yes} yes's</div>
-                <div className="total-title">{total} total</div>
-                <div className="no-title">{no} no's</div>
+                <div className="yes-title"><b>{yes} yes's</b></div>
+                <div className="total-title"><b>{total} total</b></div>
+                <div className="no-title"><b>{no} no's</b></div>
                 <CanvasJSChart options={options} />
             </div>
         );

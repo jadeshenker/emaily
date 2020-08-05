@@ -14,8 +14,12 @@ class Header extends Component {
             default: 
                 return [
                     <li key="1"><StripeWrapper /></li>,
-                    <li key="2" style={{margin: '0 50px'}}>My Credits : {this.props.auth.credits}</li>,
-                    <li key="3"><a href="/api/logout">Logout</a></li>
+                    <li key="2" style={{margin: '0 50px'}}>
+                        <button className="current-credits">
+                            My Credits : {this.props.auth.credits}
+                        </button>
+                    </li>,
+                    <li key="3"><a href="/api/logout"><b>Logout</b></a></li>
                 ];
         }
     }
